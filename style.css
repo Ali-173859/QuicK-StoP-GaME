@@ -1,0 +1,148 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-image: url(./animated-gifs-of-fighting-game-backgrounds-8.gif);
+   background-size: cover;
+   background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.container{
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) );
+    max-width: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 550px;
+    background-color: rgb(60, 61, 63, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.37 ); */
+}
+.title{
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(0, 247, 21);
+    position: relative;
+}
+
+.title::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    white-space: nowrap;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(52, 241, 68);
+    border-right: 8px solid rgb(0, 247, 21);
+    animation: animate 8s linear infinite;}
+
+    @keyframes animate{
+        0%,10%,100%
+        {width: 0%;}
+        70%,90%
+    
+        {width: 100%;}
+
+    }
+
+.title:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 30px rgb(0, 247, 21));
+}
+
+ul{
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    color: #ffffff;
+    font-size: 1.2rem;
+    list-style: circle;
+
+}
+
+ul:hover{
+    color: #f7a000;
+}
+#number{
+    font-size: 6rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+        margin-left: 30%;
+
+
+}
+#user_input{
+  
+    width:19rem;
+ padding: 10px;
+ border-radius: 20px;
+ border: none;
+ 
+}
+#user_input:hover{
+    box-shadow: 0 0 1.5rem #ffd902;
+    color: #000;
+    cursor: pointer;
+    transform: 120ms;
+}
+
+
+.btn{
+   
+    margin-left: 32%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    
+   
+}
+.btn button{
+    margin-top: 10px;
+    padding: 10px;
+    width: 90px;
+    border-radius: 20px;
+   backdrop-filter: blur();
+   background-color:  rgba(47, 48, 49, 0.6);
+   color:#fff;
+   letter-spacing: 5px;
+}
+.btn button:hover{
+    box-shadow: 0 0 1.5rem #dbdbdb;
+    color: #ffc400;
+    cursor: pointer;
+    transform: 120ms;
+    transform: translateY(-5px);
+    
+
+}
+#result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 500;
+    
+}
+@media (max-width: 430px){
+   .container{
+    width: 20rem;
+   }
+   #user_input{
+    width: 16rem;
+   }
+
+}
